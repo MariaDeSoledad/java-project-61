@@ -1,23 +1,18 @@
-package hexlet.code;
-import java.util.Random;
-import java.util.Scanner;
+package hexlet.code.games;
+import hexlet.code.Engine;
+
+import static hexlet.code.Engine.name;
 
 public class Even {
     public static void playEven() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String name = sc.nextLine();
-        System.out.println("Hello, " + name + "!");
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        Engine.useEngine();
         int count = 1;
         int k = 0;
         while (k == 0 && count < 4) {
-            Random rand = new Random();
-            int randomNumber = rand.nextInt();
+            int randomNumber = Engine.getRandomNumber();
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");
-            String answer = sc.nextLine();
+            String answer = Engine.getInput();
             if (Math.abs(randomNumber) % 2 == 0 && answer.equals("yes")) {
                 System.out.println("Correct!");
                 count += 1;
@@ -25,7 +20,6 @@ public class Even {
                 System.out.println("Correct!");
                 count += 1;
             } else {
-                count += 1;
                 k -= 1;
                 String rightAnswer;
                 if (Math.abs(randomNumber) % 2 == 0) {
@@ -40,6 +34,5 @@ public class Even {
         if (count == 4) {
             System.out.println("Congratulations, " + name + "!");
         }
-        sc.close();
     }
 }

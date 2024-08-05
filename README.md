@@ -3,8 +3,15 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/85fb05401d7811490923/maintainability)](https://codeclimate.com/github/MariaDeSoledad/java-project-61/maintainability)
 
-   **Пример запуска игры:**
+   **Пример запуска игры Even:**
 
    Посмотрите, как играть в нашу игру, включая моменты победы и поражения:
 
    [Ссылка на видео с аскинему](https://asciinema.org/a/w20Gw40GLFedJgWIejKupMuXQ)
+
+   **Пример запуска игры Calc:**
+
+   Посмотрите, как играть в нашу игру, включая моменты победы и поражения:
+
+   [Ссылка на видео с аскинему](https://asciinema.org/a/NHhn5LA9Dp3IBQKB4cwk9IkWJ)
+
