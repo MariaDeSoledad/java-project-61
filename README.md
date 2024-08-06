@@ -21,4 +21,11 @@
 
    [Ссылка на видео с аскинему](https://asciinema.org/a/lY2FL6hIjeUCGj4qoG15pP1boi)
 
+   **Пример запуска игры Progression:**
+
+   Посмотрите, как играть в нашу игру, включая моменты победы и поражения:
+
+   [Ссылка на видео с аскинему](https://asciinema.org/a/ONTJX9hBaOCc2vVoqSO5ARNBZ)
+
+
 
