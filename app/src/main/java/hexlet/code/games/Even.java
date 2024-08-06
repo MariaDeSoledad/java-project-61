@@ -28,7 +28,7 @@ public class Even {
                 } else {
                     rightAnswer = "no";
                 }
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'.");
                 System.out.println("Let's try again, " + name + "!");
             }
         }

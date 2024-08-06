@@ -27,7 +27,7 @@ public class GCD {
                 System.out.println("Correct!");
                 count += 1;
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
                 System.out.println("Let's try again, " + name + "!");
                 k -= 1;
             }

@@ -32,7 +32,7 @@ public class Calc {
                 System.out.println("Correct!");
                 count += 1;
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + stringResult + "'");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + stringResult + "'.");
                 System.out.println("Let's try again, " + name + "!");
                 k -= 1;
             }

@@ -22,7 +22,14 @@ public class Engine {
         Random rand = new Random();
         return rand.nextInt(3);
     }
-
+    public static int getRandomDifference() {
+        Random rand = new Random();
+        return rand.nextInt(4) + 1;
+    }
+    public static int getRandomMissing() {
+        Random rand = new Random();
+        return rand.nextInt(10);
+    }
     public static String getInput() {
         return sc.nextLine();
     }
