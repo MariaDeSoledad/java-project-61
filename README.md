@@ -15,3 +15,10 @@
 
    [Ссылка на видео с аскинему](https://asciinema.org/a/NHhn5LA9Dp3IBQKB4cwk9IkWJ)
 
+   **Пример запуска игры GCD:**
+
+   Посмотрите, как играть в нашу игру, включая моменты победы и поражения:
+
+   [Ссылка на видео с аскинему](https://asciinema.org/a/lY2FL6hIjeUCGj4qoG15pP1boi)
+
+

@@ -7,6 +7,7 @@ import static hexlet.code.Engine.name;
 public class Calc {
     public static void playCalc() {
         Engine.useEngine();
+        System.out.println("What is the result of the expression?");
         String[] operations = {" + ", " - ", " * " };
         int count = 1;
         int k = 0;
@@ -17,16 +18,16 @@ public class Calc {
             System.out.println("Question: " + number1 + operations[operation] + number2);
             System.out.print("Your answer: ");
             String answer = Engine.getInput();
-            int result;
+            int intResult;
             if (operation == 0) {
-                result = number1 + number2;
+                intResult = number1 + number2;
             } else if (operation == 1) {
-                result = number1 - number2;
+                intResult = number1 - number2;
             } else {
-                result = number1 * number2;
+                intResult = number1 * number2;
             }
             String stringResult = "";
-            stringResult += result;
+            stringResult += intResult;
             if (answer.equals(stringResult)) {
                 System.out.println("Correct!");
                 count += 1;

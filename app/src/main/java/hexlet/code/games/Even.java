@@ -6,6 +6,7 @@ import static hexlet.code.Engine.name;
 public class Even {
     public static void playEven() {
         Engine.useEngine();
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         int count = 1;
         int k = 0;
         while (k == 0 && count < 4) {
