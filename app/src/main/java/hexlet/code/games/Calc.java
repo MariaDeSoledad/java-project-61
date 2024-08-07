@@ -11,7 +11,7 @@ public class Calc {
         String[] operations = {" + ", " - ", " * " };
         int countOfSuccess = 1;
         int countOfFailures = 0;
-        int theBorderOfAttempts = 4;
+        final int theBorderOfAttempts = 4;
         while (countOfFailures == 0 && countOfSuccess < theBorderOfAttempts) {
             var number1 = Engine.getRandomNumber();
             var number2 = Engine.getRandomNumber();

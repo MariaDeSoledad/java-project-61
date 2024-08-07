@@ -10,7 +10,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         int countOfSuccess = 1;
         int countOfFailures  = 0;
-        int theBorderOfAttempts = 4;
+        final int theBorderOfAttempts = 4;
         while (countOfFailures  == 0 && countOfSuccess < theBorderOfAttempts) {
             int number = Engine.getRandomNumber();
             System.out.println("Question: " + number);

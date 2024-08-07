@@ -14,23 +14,23 @@ public class Engine {
 
     public static int getRandomNumber() {
         Random rand = new Random();
-        int constF = 15;
+        final int constF = 15;
         return rand.nextInt(constF) + 1;
     }
 
     public static int getRandomOperation() {
         Random rand = new Random();
-        int constThree = 3;
+        final int constThree = 3;
         return rand.nextInt(constThree);
     }
     public static int getRandomDifference() {
         Random rand = new Random();
-        int constFour = 4;
+        final int constFour = 4;
         return rand.nextInt(constFour) + 1;
     }
     public static int getRandomMissing() {
         Random rand = new Random();
-        int constTen = 10;
+        final int constTen = 10;
         return rand.nextInt(constTen);
     }
     public static String getName() {

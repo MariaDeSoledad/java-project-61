@@ -10,7 +10,7 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         int countOfSuccess = 1;
         int countOfFailures = 0;
-        int theBorderOfAttempts = 4;
+        final int theBorderOfAttempts = 4;
         while (countOfFailures == 0 && countOfSuccess < theBorderOfAttempts) {
             int randomNumber = Engine.getRandomNumber();
             System.out.println("Question: " + randomNumber);

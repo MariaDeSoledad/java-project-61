@@ -10,7 +10,7 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
         int countOfSuccess = 1;
         int countOfFailures = 0;
-        int theBorderOfAttempts = 4;
+        final int theBorderOfAttempts = 4;
         while (countOfFailures == 0 && countOfSuccess < theBorderOfAttempts) {
             int startNumber = Engine.getRandomNumber();
             int diff = Engine.getRandomDifference();
