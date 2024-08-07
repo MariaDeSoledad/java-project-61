@@ -2,15 +2,13 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.name;
-
 public class GCD {
     public static void playGCD() {
         Engine.useEngine();
         System.out.println("Find the greatest common divisor of given numbers.");
-        int count = 1;
-        int k = 0;
-        while (k == 0 && count < 4) {
+        int countOfSuccess = 1;
+        int countOfFailures = 0;
+        while (countOfFailures == 0 && countOfSuccess < 4) {
             var number1 = Engine.getRandomNumber();
             var number2 = Engine.getRandomNumber();
             System.out.println("Question: " + number1 + " " + number2);
@@ -25,15 +23,15 @@ public class GCD {
             String answer = Engine.getInput();
             if (answer.equals(result)) {
                 System.out.println("Correct!");
-                count += 1;
+                countOfSuccess += 1;
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                k -= 1;
+                System.out.println("Let's try again, " + Engine.getName() + "!");
+                countOfFailures -= 1;
             }
         }
-        if (count == 4) {
-            System.out.println("Congratulations, " + name + "!");
+        if (countOfSuccess == 4) {
+            System.out.println("Congratulations, " + Engine.getName() + "!");
         }
     }
 }

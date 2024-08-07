@@ -2,15 +2,13 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.name;
-
 public class Progression {
     public static void playProgression() {
         Engine.useEngine();
         System.out.println("What number is missing in the progression?");
-        int count = 1;
-        int k = 0;
-        while (k == 0 && count < 4) {
+        int countOfSuccess = 1;
+        int countOfFailures = 0;
+        while (countOfFailures == 0 && countOfSuccess < 4) {
             int startNumber = Engine.getRandomNumber();
             int diff = Engine.getRandomDifference();
             System.out.print("Question: ");
@@ -28,15 +26,15 @@ public class Progression {
             stringMissingN += startNumber + diff * missingNumber;
             if (answer.equals(stringMissingN)) {
                 System.out.println("Correct!");
-                count += 1;
+                countOfSuccess += 1;
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + stringMissingN + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                k -= 1;
+                System.out.println("Let's try again, " + Engine.getName() + "!");
+                countOfFailures -= 1;
             }
         }
-        if (count == 4) {
-            System.out.println("Congratulations, " + name + "!");
+        if (countOfSuccess == 4) {
+            System.out.println("Congratulations, " + Engine.getName() + "!");
         }
     }
 }

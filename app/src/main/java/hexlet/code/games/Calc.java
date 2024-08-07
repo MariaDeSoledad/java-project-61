@@ -2,16 +2,14 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.name;
-
 public class Calc {
     public static void playCalc() {
         Engine.useEngine();
         System.out.println("What is the result of the expression?");
         String[] operations = {" + ", " - ", " * " };
-        int count = 1;
-        int k = 0;
-        while (k == 0 && count < 4) {
+        int countOfSuccess = 1;
+        int countOfFailures = 0;
+        while (countOfFailures == 0 && countOfSuccess < 4) {
             var number1 = Engine.getRandomNumber();
             var number2 = Engine.getRandomNumber();
             var operation = Engine.getRandomOperation();
@@ -30,15 +28,15 @@ public class Calc {
             stringResult += intResult;
             if (answer.equals(stringResult)) {
                 System.out.println("Correct!");
-                count += 1;
+                countOfSuccess += 1;
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + stringResult + "'.");
-                System.out.println("Let's try again, " + name + "!");
-                k -= 1;
+                System.out.println("Let's try again, " + Engine.getName() + "!");
+                countOfFailures -= 1;
             }
         }
-        if (count == 4) {
-            System.out.println("Congratulations, " + name + "!");
+        if (countOfSuccess == 4) {
+            System.out.println("Congratulations, " + Engine.getName()  + "!");
         }
     }
 }

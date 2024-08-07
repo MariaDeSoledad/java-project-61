@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-    public static String name;
+    private static String name;
     public static Scanner sc = new Scanner(System.in);
 
     public static void useEngine() {
@@ -32,5 +32,8 @@ public class Engine {
     }
     public static String getInput() {
         return sc.nextLine();
+    }
+    public static String getName() {
+        return name;
     }
 }
