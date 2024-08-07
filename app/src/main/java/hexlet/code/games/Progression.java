@@ -1,14 +1,17 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import java.util.Scanner;
 
 public class Progression {
     public static void playProgression() {
+        Scanner sc = new Scanner(System.in);
         Engine.useEngine();
         System.out.println("What number is missing in the progression?");
         int countOfSuccess = 1;
         int countOfFailures = 0;
-        while (countOfFailures == 0 && countOfSuccess < 4) {
+        int theBorderOfAttempts = 4;
+        while (countOfFailures == 0 && countOfSuccess < theBorderOfAttempts) {
             int startNumber = Engine.getRandomNumber();
             int diff = Engine.getRandomDifference();
             System.out.print("Question: ");
@@ -21,7 +24,7 @@ public class Progression {
                 }
             }
             System.out.print("Your answer: ");
-            String answer = Engine.getInput();
+            String answer = sc.nextLine();
             String stringMissingN = "";
             stringMissingN += startNumber + diff * missingNumber;
             if (answer.equals(stringMissingN)) {
@@ -33,7 +36,7 @@ public class Progression {
                 countOfFailures -= 1;
             }
         }
-        if (countOfSuccess == 4) {
+        if (countOfSuccess == theBorderOfAttempts) {
             System.out.println("Congratulations, " + Engine.getName() + "!");
         }
     }
