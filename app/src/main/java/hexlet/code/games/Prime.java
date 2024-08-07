@@ -20,7 +20,7 @@ public class Prime {
                     countDivide++;
                 }
             }
-            if (countDivide == 0) {
+            if (countDivide == 0 && number != 1) {
                 rightAnswer = "yes";
             } else {
                 rightAnswer = "no";
