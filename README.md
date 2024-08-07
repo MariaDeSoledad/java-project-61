@@ -27,5 +27,9 @@
 
    [Ссылка на видео с аскинему](https://asciinema.org/a/ONTJX9hBaOCc2vVoqSO5ARNBZ)
 
+   **Пример запуска игры Prime:**
 
+   Посмотрите, как играть в нашу игру, включая моменты победы и поражения:
+
+   [Ссылка на видео с аскинему](https://asciinema.org/a/oADbi6E1cbBU06u9nyvpcvOt8)
 
