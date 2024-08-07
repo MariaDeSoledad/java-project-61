@@ -1,44 +1,39 @@
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Игнорировать папку сборки
+/build/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
+# Если вы используете Gradle, игнорируем связанные файлы и папки
+.gradle/
+build.gradle.kts
+gradlew
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Игнорируем временные файлы и папки
+/tmp/
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+*.class
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Игнорировать артефакты и дистрибуцию
+/build/distributions/
+build/libs/
+build/reports/
+build/generated/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Игнорировать папку с артефактами для Checkstyle
+Checkstyle/
 
-### VS Code ###
+# Ignoring IDE config files
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
 .vscode/
 
-### Mac OS ###
+# Mac OS
 .DS_Store
 
-.idea/
+# Личные файлы
+*.log
+*.tmp
