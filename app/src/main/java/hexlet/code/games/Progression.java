@@ -11,12 +11,13 @@ public class Progression {
         int countOfSuccess = 1;
         int countOfFailures = 0;
         final int theBorderOfAttempts = 4;
+        final int theLengthOfProgression = 10;
         while (countOfFailures == 0 && countOfSuccess < theBorderOfAttempts) {
             int startNumber = Engine.getRandomNumber();
             int diff = Engine.getRandomDifference();
             System.out.print("Question: ");
             int missingNumber = Engine.getRandomMissing();
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < theLengthOfProgression; i++) {
                 if (i != missingNumber) {
                     System.out.print(startNumber + diff * i + " ");
                 } else {
