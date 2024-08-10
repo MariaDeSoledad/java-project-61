@@ -24,10 +24,15 @@ public class GCD {
             }
             System.out.print("Your answer: ");
             String answer = sc.nextLine();
-            Engine.checkAnswer(answer, result, countOfSuccess);
+            if (answer.equals(result)) {
+                Engine.correctMessage();
+                countOfSuccess += 1;
+            } else {
+                Engine.wrongMessage(answer, result);
+                countOfFailures -= 1;
+            }
         }
-        if (countOfSuccess == theBorderOfAttempts) {
-            System.out.println("Congratulations, " + Engine.getName() + "!");
-        }
+        Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }
 }
+

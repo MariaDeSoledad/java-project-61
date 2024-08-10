@@ -28,10 +28,15 @@ public class Progression {
             String answer = sc.nextLine();
             String stringMissingN = "";
             stringMissingN += startNumber + diff * missingNumber;
-            Engine.checkAnswer(answer, stringMissingN, countOfSuccess);
+            if (answer.equals(stringMissingN)) {
+                Engine.correctMessage();
+                countOfSuccess += 1;
+            } else {
+                Engine.wrongMessage(answer, stringMissingN);
+                countOfFailures -= 1;
+            }
         }
-        if (countOfSuccess == theBorderOfAttempts) {
-            System.out.println("Congratulations, " + Engine.getName() + "!");
-        }
+        Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }
 }
+

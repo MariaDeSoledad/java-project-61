@@ -36,12 +36,16 @@ public class Engine {
     public static String getName() {
         return name;
     }
-    public static void checkAnswer(String answer, String correctAnswer, int countOfSuccess) {
-        if (answer.equals(correctAnswer)) {
-            System.out.println("Correct!");
-            countOfSuccess += 1;
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+    public static void correctMessage() {
+        System.out.println("Correct!");
+    }
+    public static void wrongMessage(String answer, String correctAnswer) {
+        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+        System.out.println("Let's try again, " + Engine.getName() + "!");
+    }
+    public static void finalMessage(int countOfSuccess, int theBorderOfAttempts) {
+        if (countOfSuccess == theBorderOfAttempts) {
+            System.out.println("Congratulations, " + Engine.getName()  + "!");
         }
     }
 }

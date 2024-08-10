@@ -29,10 +29,14 @@ public class Calc {
             }
             String stringResult = "";
             stringResult += intResult;
-            Engine.checkAnswer(answer, stringResult, countOfSuccess);
+            if (answer.equals(stringResult)) {
+                Engine.correctMessage();
+                countOfSuccess += 1;
+            } else {
+                Engine.wrongMessage(answer, stringResult);
+                countOfFailures -= 1;
+            }
         }
-        if (countOfSuccess == theBorderOfAttempts) {
-            System.out.println("Congratulations, " + Engine.getName()  + "!");
-        }
+        Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }
 }

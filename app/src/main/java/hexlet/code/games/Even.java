@@ -17,10 +17,10 @@ public class Even {
             System.out.print("Your answer: ");
             String answer = sc.nextLine();
             if (Math.abs(randomNumber) % 2 == 0 && answer.equals("yes")) {
-                System.out.println("Correct!");
+                Engine.correctMessage();
                 countOfSuccess += 1;
             } else if (Math.abs(randomNumber) % 2 != 0 && answer.equals("no")) {
-                System.out.println("Correct!");
+                Engine.correctMessage();
                 countOfSuccess += 1;
             } else {
                 countOfFailures -= 1;
@@ -30,12 +30,9 @@ public class Even {
                 } else {
                     rightAnswer = "no";
                 }
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'.");
-                System.out.println("Let's try again, " + Engine.getName() + "!");
+                Engine.wrongMessage(answer, rightAnswer);
             }
         }
-        if (countOfSuccess == theBorderOfAttempts) {
-            System.out.println("Congratulations, " + Engine.getName() + "!");
-        }
+        Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }
 }

@@ -28,10 +28,15 @@ public class Prime {
             } else {
                 rightAnswer = "no";
             }
-            Engine.checkAnswer(answer, rightAnswer, countOfSuccess);
+            if (answer.equals(rightAnswer)) {
+                Engine.correctMessage();
+                countOfSuccess += 1;
+            } else {
+                Engine.wrongMessage(answer, rightAnswer);
+                countOfFailures -= 1;
+            }
         }
-        if (countOfSuccess == theBorderOfAttempts) {
-            System.out.println("Congratulations, " + Engine.getName() + "!");
-        }
+        Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }
 }
+
