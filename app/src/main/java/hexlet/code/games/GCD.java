@@ -24,14 +24,7 @@ public class GCD {
             }
             System.out.print("Your answer: ");
             String answer = sc.nextLine();
-            if (answer.equals(result)) {
-                System.out.println("Correct!");
-                countOfSuccess += 1;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + result + "'.");
-                System.out.println("Let's try again, " + Engine.getName() + "!");
-                countOfFailures -= 1;
-            }
+            Engine.checkAnswer(answer, result, countOfSuccess);
         }
         if (countOfSuccess == theBorderOfAttempts) {
             System.out.println("Congratulations, " + Engine.getName() + "!");

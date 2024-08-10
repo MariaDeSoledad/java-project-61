@@ -28,14 +28,7 @@ public class Prime {
             } else {
                 rightAnswer = "no";
             }
-            if (answer.equals(rightAnswer)) {
-                System.out.println("Correct!");
-                countOfSuccess += 1;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'.");
-                System.out.println("Let's try again, " + Engine.getName() + "!");
-                countOfFailures  -= 1;
-            }
+            Engine.checkAnswer(answer, rightAnswer, countOfSuccess);
         }
         if (countOfSuccess == theBorderOfAttempts) {
             System.out.println("Congratulations, " + Engine.getName() + "!");

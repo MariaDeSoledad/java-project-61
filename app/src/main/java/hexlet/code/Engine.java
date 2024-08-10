@@ -36,4 +36,12 @@ public class Engine {
     public static String getName() {
         return name;
     }
+    public static void checkAnswer(String answer, String correctAnswer, int countOfSuccess) {
+        if (answer.equals(correctAnswer)) {
+            System.out.println("Correct!");
+            countOfSuccess += 1;
+        } else {
+            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+        }
+    }
 }

@@ -28,14 +28,7 @@ public class Progression {
             String answer = sc.nextLine();
             String stringMissingN = "";
             stringMissingN += startNumber + diff * missingNumber;
-            if (answer.equals(stringMissingN)) {
-                System.out.println("Correct!");
-                countOfSuccess += 1;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + stringMissingN + "'.");
-                System.out.println("Let's try again, " + Engine.getName() + "!");
-                countOfFailures -= 1;
-            }
+            Engine.checkAnswer(answer, stringMissingN, countOfSuccess);
         }
         if (countOfSuccess == theBorderOfAttempts) {
             System.out.println("Congratulations, " + Engine.getName() + "!");

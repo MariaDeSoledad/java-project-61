@@ -29,14 +29,7 @@ public class Calc {
             }
             String stringResult = "";
             stringResult += intResult;
-            if (answer.equals(stringResult)) {
-                System.out.println("Correct!");
-                countOfSuccess += 1;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + stringResult + "'.");
-                System.out.println("Let's try again, " + Engine.getName() + "!");
-                countOfFailures -= 1;
-            }
+            Engine.checkAnswer(answer, stringResult, countOfSuccess);
         }
         if (countOfSuccess == theBorderOfAttempts) {
             System.out.println("Congratulations, " + Engine.getName()  + "!");
