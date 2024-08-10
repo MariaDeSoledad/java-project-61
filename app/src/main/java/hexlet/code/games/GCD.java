@@ -24,13 +24,9 @@ public class GCD {
             }
             System.out.print("Your answer: ");
             String answer = sc.nextLine();
-            if (answer.equals(result)) {
-                Engine.correctMessage();
-                countOfSuccess += 1;
-            } else {
-                Engine.wrongMessage(answer, result);
-                countOfFailures -= 1;
-            }
+            int[] results = Engine.checkAnswer(answer, result, countOfSuccess, countOfFailures);
+            countOfSuccess = results[0];
+            countOfFailures = results[1];
         }
         Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }

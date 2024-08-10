@@ -28,13 +28,9 @@ public class Prime {
             } else {
                 rightAnswer = "no";
             }
-            if (answer.equals(rightAnswer)) {
-                Engine.correctMessage();
-                countOfSuccess += 1;
-            } else {
-                Engine.wrongMessage(answer, rightAnswer);
-                countOfFailures -= 1;
-            }
+            int[] results = Engine.checkAnswer(answer, rightAnswer, countOfSuccess, countOfFailures);
+            countOfSuccess = results[0];
+            countOfFailures = results[1];
         }
         Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }

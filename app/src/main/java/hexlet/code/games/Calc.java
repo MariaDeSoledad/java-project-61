@@ -29,13 +29,9 @@ public class Calc {
             }
             String stringResult = "";
             stringResult += intResult;
-            if (answer.equals(stringResult)) {
-                Engine.correctMessage();
-                countOfSuccess += 1;
-            } else {
-                Engine.wrongMessage(answer, stringResult);
-                countOfFailures -= 1;
-            }
+            int[] results = Engine.checkAnswer(answer, stringResult, countOfSuccess, countOfFailures);
+            countOfSuccess = results[0];
+            countOfFailures = results[1];
         }
         Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }

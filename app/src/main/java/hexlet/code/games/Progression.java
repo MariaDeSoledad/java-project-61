@@ -28,13 +28,9 @@ public class Progression {
             String answer = sc.nextLine();
             String stringMissingN = "";
             stringMissingN += startNumber + diff * missingNumber;
-            if (answer.equals(stringMissingN)) {
-                Engine.correctMessage();
-                countOfSuccess += 1;
-            } else {
-                Engine.wrongMessage(answer, stringMissingN);
-                countOfFailures -= 1;
-            }
+            int[] results = Engine.checkAnswer(answer, stringMissingN, countOfSuccess, countOfFailures);
+            countOfSuccess = results[0];
+            countOfFailures = results[1];
         }
         Engine.finalMessage(countOfSuccess, theBorderOfAttempts);
     }

@@ -48,4 +48,14 @@ public class Engine {
             System.out.println("Congratulations, " + Engine.getName()  + "!");
         }
     }
+    public static int[] checkAnswer(String userAnswer, String correctAnswer, int countOfSuccess, int countOfFailures) {
+        if (userAnswer.equals(correctAnswer)) {
+            Engine.correctMessage();
+            countOfSuccess += 1;
+        } else {
+            Engine.wrongMessage(userAnswer, correctAnswer);
+            countOfFailures += 1;
+        }
+        return new int[]{countOfSuccess, countOfFailures};
+    }
 }
